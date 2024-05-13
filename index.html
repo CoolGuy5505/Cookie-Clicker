@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cookie Clicker</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(250, 215, 140);
+            text-align: center;
+        }
+        #aboutPage {
+            text-align: left;
+            width: 500px;
+        }
+        #clickUpgrade1{
+            position: relative;
+           /* right: 82px; */
+            top: 5px 
+        }
+        #cpsUpgrade1{
+           position: relative;
+          /* right: 165px; */
+            top: 50px; 
+        }
+        #cookiePicture{
+            orientation: center;
+            /*left: 78px;
+            top: 0px;*/
+        }
+        #autoClickerUpgradeDisplay{
+            position: relative;
+            top: 35px
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+    <p id="aboutPage">This is a simple program writen by David. To start playing, click the cookie. As you click, the number in the top will start to go up. As you get more cookies, you will be able to afford more upgrades. Upgrades get more expesive for each time you perchase them. The goal of this game is to get as many cookies as possible. Have Fun! :)</p>
+
+    <h1 id="cookieDisplayText">Cookies:</h1> 
+    <h1 id="cookieCount">0</h1>
+    <!--the main cookie image-->
+    <img id="cookiePicture" class="center"
+    src="https://www.shutterstock.com/image-photo/chocolate-chip-cookie-isolated-on-600nw-582991504.jpg" 
+    alt="cookie" 
+    width="250" 
+    height="250"
+    onclick="cookieClicked()">
+    <div id="upgrades">
+        <h1 id="clickStregthUpgradeDisplay">Click Stregth Upgrade</h1>
+        <button id="clickUpgrade1" class="center" onclick="clickUpgrade1(costOfUpgrade1)">50 cookies</button>
+        <h1 id="autoClickerUpgradeDisplay">Autoclicker Upgrade</h1>
+        <button id="cpsUpgrade1" class="center" onclick="cpsUpgrade1(costOfCpsUpgrade1)">50 cookies</button>
+        <h1 id="resetHeader">RESET</h1>
+        <button id="resetButton" onclick="resetAndClearData()">RESET ALL DATA AND PROGRESS</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
